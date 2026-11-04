@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your First Client Intake with the AI Tool</title>
+<meta name="description" content="A 10-minute interactive learning object for nonprofit intake staff.">
+<style>
+:root{--navy:#1F3A5F;--teal:#1E7F74;--coral:#C4512F;--amber:#E9C46A;--light:#F1F4F7;--ink:#1d2329;--muted:#55606b;--ok:#1E7F74;--bad:#B3261E;--card:#fff;--bg:#fafbfc;--line:#d5dbe1}
+@media (prefers-color-scheme: dark){:root{--navy:#9fc1ea;--teal:#5cc4b6;--coral:#f0936f;--light:#1c232b;--ink:#e8edf2;--muted:#a9b4bf;--ok:#5cc4b6;--bad:#ff8a80;--card:#151b21;--bg:#0f1418;--line:#2c3640}}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;font-size:18px;line-height:1.55;color:var(--ink);background:var(--bg)}
+a{color:var(--teal)}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:8px;background:var(--card);padding:8px;z-index:10}
+header{background:#1F3A5F;color:#fff;padding:28px 16px}
+header .wrap{max-width:860px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.8rem;line-height:1.2}
+header p{margin:0;color:#E9C46A;font-size:1.05rem}
+nav{position:sticky;top:0;background:var(--card);border-bottom:1px solid var(--line);z-index:5}
+nav ol{max-width:860px;margin:0 auto;padding:8px 16px;display:flex;gap:6px;flex-wrap:wrap;list-style:none}
+nav a{display:block;padding:6px 10px;border-radius:6px;text-decoration:none;font-size:.9rem;color:var(--ink);background:var(--light)}
+nav a:focus,nav a:hover{outline:2px solid var(--teal)}
+main{max-width:860px;margin:0 auto;padding:16px}
+section{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 22px;margin:18px 0}
+h2{color:var(--navy);margin-top:0;font-size:1.4rem}
+h3{color:var(--navy);font-size:1.1rem;margin-bottom:6px}
+.tag{display:inline-block;font-size:.8rem;font-weight:bold;letter-spacing:.04em;text-transform:uppercase;color:var(--teal);margin-bottom:4px}
+.objectives li{margin:6px 0}
+.steps{counter-reset:s;list-style:none;padding:0}
+.steps li{counter-increment:s;position:relative;padding:12px 12px 12px 56px;margin:10px 0;background:var(--light);border-radius:8px}
+.steps li::before{content:counter(s);position:absolute;left:12px;top:12px;width:32px;height:32px;border-radius:50%;background:var(--teal);color:#fff;font-weight:bold;display:flex;align-items:center;justify-content:center}
+.model{border-left:5px solid var(--amber);background:var(--light);padding:12px 16px;border-radius:6px}
+button{font:inherit;font-size:1rem;cursor:pointer;border-radius:8px;border:2px solid var(--teal);background:var(--card);color:var(--ink);padding:8px 14px;margin:4px 6px 4px 0}
+button.primary{background:#1E7F74;border-color:#1E7F74;color:#fff}
+button:focus{outline:3px solid var(--amber);outline-offset:2px}
+.reveal{display:none;margin-top:10px;padding:12px 14px;border-radius:8px;background:var(--light)}
+.reveal.show{display:block}
+fieldset{border:1px solid var(--line);border-radius:8px;margin:14px 0;padding:12px 14px}
+legend{font-weight:bold;padding:0 6px}
+label.opt{display:block;padding:6px 8px;border-radius:6px;margin:4px 0;cursor:pointer}
+label.opt:hover{background:var(--light)}
+.fb{margin-top:6px;font-weight:bold}
+.fb.ok{color:var(--ok)}.fb.bad{color:var(--bad)}
+#score{font-size:1.2rem;font-weight:bold;margin-top:10px}
+textarea{width:100%;min-height:150px;font:inherit;font-size:1rem;padding:10px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.checklist li{margin:4px 0}
+.recap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.recap div{background:var(--light);border-radius:8px;padding:12px;border-top:4px solid var(--teal)}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0}
+.flow span{background:#1F3A5F;color:#fff;border-radius:8px;padding:8px 12px;font-size:.95rem}
+.flow b{color:var(--muted)}
+footer{max-width:860px;margin:0 auto;padding:16px;color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="wrap">
+<h1>Your First Client Intake with the AI Tool</h1>
+<p>A 10-minute practice module for nonprofit intake staff and volunteers</p>
+</div></header>
+<nav aria-label="Module sections"><ol>
+<li><a href="#overview">1. Overview</a></li>
+<li><a href="#objectives">2. Objectives</a></li>
+<li><a href="#learn">3. Watch an intake</a></li>
+<li><a href="#practice">4. What would you do?</a></li>
+<li><a href="#quiz">5. Check your understanding</a></li>
+<li><a href="#reflect">6. Reflect</a></li>
+<li><a href="#recap">7. Recap</a></li>
+</ol></nav>
+
+<main id="main">
+<section id="overview" aria-labelledby="h-overview">
+<span class="tag">Overview</span>
+<h2 id="h-overview">Why this module exists</h2>
+<p>Your organization now has an AI intake tool that fills in client forms as you talk, works in more than one language, and keeps client information inside your organization's account. The tool already works. What most people are missing is a first intake that goes smoothly, so they trust it the next time.</p>
+<p>This module walks you through one real-style intake from start to finish. You will watch a coworker do it, decide what to do in three tricky moments, check your understanding with a short quiz, and write how you would explain the tool to a nervous client. It takes about 10 minutes, and you can do it on your phone between appointments.</p>
+<div class="flow" aria-label="The five steps of an intake"><span>Greet and choose language</span><b aria-hidden="true">&rarr;</b><span>Get consent</span><b aria-hidden="true">&rarr;</b><span>Talk, tool fills form</span><b aria-hidden="true">&rarr;</b><span>Review with client</span><b aria-hidden="true">&rarr;</b><span>Save and next step</span></div>
+</section>
+
+<section id="objectives" aria-labelledby="h-obj">
+<span class="tag">Learning objectives</span>
+<h2 id="h-obj">By the end of this module, you will be able to</h2>
+<ol class="objectives">
+<li><strong>Complete</strong> a client intake in the AI tool by following the five steps in order.</li>
+<li><strong>Decide</strong> when to switch to offline mode or the paper backup card during an intake.</li>
+<li><strong>Explain</strong> to a client, in plain language, how their information is handled and protected.</li>
+</ol>
+</section>
+
+<section id="learn" aria-labelledby="h-learn">
+<span class="tag">Instructional content</span>
+<h2 id="h-learn">Watch Maria do an intake</h2>
+<p>Maria is an intake coordinator at a food assistance program. She has used paper forms for twelve years. Here is her first intake with the tool, step by step. Notice what she says out loud at each step.</p>
+<ol class="steps">
+<li><h3>Greet and choose the language</h3>Maria greets Mr. Tran and asks which language he prefers. She taps <em>Vietnamese</em>, and the tool switches its prompts and the printed summary to Vietnamese. <br><em>Why it matters.</em> Choosing the language first means the client understands every question that follows.</li>
+<li><h3>Get consent before recording</h3>Maria shows the one-line consent screen and reads it aloud. "This tool helps me fill in your form while we talk. Only our staff can see it. Is that okay?" Mr. Tran agrees and she taps <em>Consent given</em>. <br><em>Why it matters.</em> Nothing is captured until the client agrees. If a client says no, use the paper form. That is always fine.</li>
+<li><h3>Talk normally while the tool fills the form</h3>Maria asks her usual questions and looks at Mr. Tran, not the screen. The tool fills in household size, address, and income fields as they talk. <br><em>Why it matters.</em> The conversation stays human. The tool does the typing.</li>
+<li><h3>Review the form together</h3>Before saving, Maria turns the screen toward Mr. Tran and reads back the key fields. He corrects his zip code, and she fixes it with one tap. <br><em>Why it matters.</em> The client is the final check. The tool can mishear, and the review catches it.</li>
+<li><h3>Save and give the next step</h3>Maria taps <em>Save</em>, prints the summary in Vietnamese, and tells Mr. Tran when his pickup is scheduled. <br><em>Why it matters.</em> The client leaves knowing what happens next, and the record is complete for your funder report.</li>
+</ol>
+<p class="model"><strong>Maria's tip.</strong> "I kept the paper backup card on the desk the first week, just in case. I only needed it once, when the Wi-Fi dropped."</p>
+</section>
+
+<section id="practice" aria-labelledby="h-practice">
+<span class="tag">Practice</span>
+<h2 id="h-practice">What would you do?</h2>
+<p>Read each moment, decide what you would do, then select the button to compare your answer.</p>
+
+<h3>Moment 1. The Wi-Fi drops halfway through an intake.</h3>
+<button aria-expanded="false" aria-controls="m1" onclick="tog(this)">Show the best move</button>
+<div class="reveal" id="m1" role="region">Tap <em>Continue offline</em>. The tool keeps what you have entered and saves the rest on the device, then syncs when the connection returns. If the device itself fails, finish on the paper backup card and enter it later.</div>
+
+<h3>Moment 2. A client says, "I don't want a computer listening to me."</h3>
+<button aria-expanded="false" aria-controls="m2" onclick="tog(this)">Show the best move</button>
+<div class="reveal" id="m2" role="region">Respect it. Use the paper form for this client, with no pressure and no long explanation. Consent is the client's choice every time, and the paper path is part of the process, not a failure.</div>
+
+<h3>Moment 3. The tool fills in the wrong household size.</h3>
+<button aria-expanded="false" aria-controls="m3" onclick="tog(this)">Show the best move</button>
+<div class="reveal" id="m3" role="region">Fix it during the review step. Read the field back to the client, tap it, and correct it. This is exactly why the review step exists. One correction does not mean the tool is broken.</div>
+</section>
+
+<section id="quiz" aria-labelledby="h-quiz">
+<span class="tag">Reflection activity 1 &middot; quantitative</span>
+<h2 id="h-quiz">Check your understanding</h2>
+<p>Answer all five questions, then select <em>Check my answers</em> to see your score and feedback.</p>
+<form id="quizform" onsubmit="grade(event)">
+<fieldset><legend>1. What is the first step of every intake?</legend>
+<label class="opt"><input type="radio" name="q1" value="a"> Start recording right away to save time</label>
+<label class="opt"><input type="radio" name="q1" value="b"> Greet the client and choose their language</label>
+<label class="opt"><input type="radio" name="q1" value="c"> Print the summary</label>
+<div class="fb" id="f1" aria-live="polite"></div></fieldset>
+
+<fieldset><legend>2. When can the tool begin capturing the conversation?</legend>
+<label class="opt"><input type="radio" name="q2" value="a"> Only after the client gives consent</label>
+<label class="opt"><input type="radio" name="q2" value="b"> As soon as the client sits down</label>
+<label class="opt"><input type="radio" name="q2" value="c"> After the form is saved</label>
+<div class="fb" id="f2" aria-live="polite"></div></fieldset>
+
+<fieldset><legend>3. The Wi-Fi drops during an intake. What should you do first?</legend>
+<label class="opt"><input type="radio" name="q3" value="a"> Start the intake over later</label>
+<label class="opt"><input type="radio" name="q3" value="b"> Ask the client to come back tomorrow</label>
+<label class="opt"><input type="radio" name="q3" value="c"> Tap Continue offline, and use the paper card only if the device fails</label>
+<div class="fb" id="f3" aria-live="polite"></div></fieldset>
+
+<fieldset><legend>4. Why do you review the form with the client before saving?</legend>
+<label class="opt"><input type="radio" name="q4" value="a"> The client is the final check, and the tool can mishear</label>
+<label class="opt"><input type="radio" name="q4" value="b"> It is required only for new clients</label>
+<label class="opt"><input type="radio" name="q4" value="c"> To make the intake take longer</label>
+<div class="fb" id="f4" aria-live="polite"></div></fieldset>
+
+<fieldset><legend>5. A client declines to use the tool. What is the right response?</legend>
+<label class="opt"><input type="radio" name="q5" value="a"> Explain the tool again until they agree</label>
+<label class="opt"><input type="radio" name="q5" value="b"> Use the paper form with no pressure</label>
+<label class="opt"><input type="radio" name="q5" value="c"> Ask a supervisor to convince them</label>
+<div class="fb" id="f5" aria-live="polite"></div></fieldset>
+<button type="submit" class="primary">Check my answers</button>
+<div id="score" aria-live="polite"></div>
+</form>
+</section>
+
+<section id="reflect" aria-labelledby="h-reflect">
+<span class="tag">Reflection activity 2 &middot; qualitative</span>
+<h2 id="h-reflect">Explain it in your own words</h2>
+<p>A client looks worried and asks, <strong>"Is a robot reading my private information? Who sees this?"</strong></p>
+<p>In 3 to 5 sentences, write what you would say. Think about consent, who can see the information, and what the client can do if they are not comfortable. Then think about one situation at <em>your</em> site where this conversation might be harder, and how you would handle it.</p>
+<label for="refl" class="tag">Your response</label>
+<textarea id="refl" aria-describedby="reflhelp"></textarea>
+<p id="reflhelp" style="color:var(--muted);font-size:.9rem">Your response stays on your device. Bring it to your next team huddle to compare with coworkers.</p>
+<button class="primary" aria-expanded="false" aria-controls="modelans" onclick="tog(this)">Compare with a model response</button>
+<div class="reveal" id="modelans" role="region">
+<p class="model">"It is a tool that helps me type while we talk, so I can look at you instead of a screen. Nothing is recorded unless you say yes. Only staff at our organization can see your file, and we use it to set up your services. If you would rather not use it, we can do the paper form instead. That is completely fine."</p>
+<p><strong>Check your own response.</strong> Did it</p>
+<ul class="checklist">
+<li>use plain words a client would understand?</li>
+<li>make clear that the client chooses, and that paper is a real option?</li>
+<li>say who can see the information?</li>
+<li>name a harder situation at your site and a plan for it?</li>
+</ul>
+</div>
+</section>
+
+<section id="recap" aria-labelledby="h-recap">
+<span class="tag">Closure and recap</span>
+<h2 id="h-recap">What you practiced today</h2>
+<div class="recap">
+<div><h3>Objective 1. The five steps</h3>Greet and choose the language, get consent, talk while the tool fills the form, review with the client, then save and give the next step.</div>
+<div><h3>Objective 2. When to switch</h3>Weak connection, tap Continue offline. Device failure or a client who declines, use the paper card. Both are normal.</div>
+<div><h3>Objective 3. Explaining privacy</h3>Plain words, consent first, only your staff can see it, and paper is always an option.</div>
+</div>
+<p style="margin-top:16px"><strong>Your next step.</strong> Do your first real intake with the tool this week, with the paper backup card on the desk. If you get stuck, ask your site champion. You do not need to be perfect on the first try. Maria was not.</p>
+<button onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to top</button>
+</section>
+</main>
+<footer>Created by Alexander Orozco for IX510 Instructional Design, Purdue Global. Scenario and names are illustrative.</footer>
+
+<script>
+function tog(b){var t=document.getElementById(b.getAttribute('aria-controls'));var open=t.classList.toggle('show');b.setAttribute('aria-expanded',open?'true':'false');}
+var KEY={q1:['b','Correct. Language first, so the client understands everything that follows.','Not quite. Start by greeting the client and choosing their language.'],
+q2:['a','Correct. Nothing is captured until the client agrees.','Not quite. The tool captures nothing until the client gives consent.'],
+q3:['c','Correct. Continue offline keeps your work. The paper card is the backup if the device fails.','Not quite. Tap Continue offline first. The paper card is for a device failure.'],
+q4:['a','Correct. The client is the final check, and the review catches mishearing.','Not quite. The review exists because the tool can mishear, and the client confirms the facts.'],
+q5:['b','Correct. Consent is the client’s choice, and paper is a normal path.','Not quite. Respect the choice and use the paper form, with no pressure.']};
+function grade(e){e.preventDefault();var s=0,n=0;for(var k in KEY){n++;var sel=document.querySelector('input[name='+k+']:checked');var f=document.getElementById('f'+k.slice(1));
+if(!sel){f.textContent='Please choose an answer.';f.className='fb bad';continue;}
+if(sel.value===KEY[k][0]){s++;f.textContent=KEY[k][1];f.className='fb ok';}else{f.textContent=KEY[k][2];f.className='fb bad';}}
+document.getElementById('score').textContent='Your score is '+s+' out of '+n+'. '+(s===n?'Great work. You are ready for your first intake.':'Review the feedback above, then try again.');}
+</script>
+</body>
+</html>
